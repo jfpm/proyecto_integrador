@@ -14,12 +14,8 @@ export default function Door() {
         metalnessMap: PATH + 'metalic.jpg'
     })
 
-
-
     return (
-
-
-        <mesh rotation-y={Math.PI / 12}>
+        <mesh castShadow rotation-y={Math.PI / 12}>
             <planeGeometry args={[2, 3]} />
             <meshStandardMaterial {...props} side={DoubleSide} />
         </mesh>
