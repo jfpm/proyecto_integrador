@@ -5,14 +5,12 @@ import { useFrame } from "@react-three/fiber";
 import { Color } from "three";
 import * as THREE from 'three'
 
-export default function CurvedPlaned({ width, height, radius, children, ...props }) {
+export default function CurvedPlaned2({ width, height, radius, children, ...props }) {
     const { geometry, heightMin, heightMax } = useMemo(() => curvedPlaneGeometry(width, height, radius), [width, height, radius])
-    
 
-    
     return (
-        <group  {...props}>
-            <mesh geometry={geometry} receiveShadow castShadow position-z={-heightMax}>
+        <group {...props}>
+            <mesh  geometry={geometry} receiveShadow castShadow position-z={-heightMax}>
                 {children}
             </mesh>
         </group>
