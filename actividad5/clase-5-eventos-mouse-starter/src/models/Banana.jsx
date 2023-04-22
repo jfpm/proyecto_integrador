@@ -10,7 +10,9 @@ export default function Banana(props) {
 
     const { nodes, materials } = useGLTF("/static/banana.glb");
     return (
-        <group ref={bananaRef} {...props} dispose={null}>
+        <group ref={bananaRef} {...props} dispose={null} onClick={()=>{
+            alert("Click :)");
+        }}>
             <mesh
                 geometry={nodes.Cube.geometry}
                 material={materials.Material}
